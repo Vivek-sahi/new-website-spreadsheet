@@ -698,7 +698,7 @@ p.style.cursor='pointer';p.onclick=function(){p.style.display='none';v.controls=
 <button class="gear" id="gearBtn" aria-label="Prototype controls" title="Prototype controls"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
 <div class="gpanel" id="gpanel" hidden></div>
 <script>(function(){
-var V={"open": ["v8.png", "v4.png", "v3.png", "v2.png", "basic-v1.png"], "work": ["v10.png", "v9.png", "v8.png", "v4.png", "v3.png", "v2.png", "basic-v1.png"], "share": ["v8.png", "v4.png", "v3.png", "v2.png", "basic-v1.png"], "why": ["drawn-v3", "drawn-v2", "drawn-v1"]},STEPS=[['open','Open — any model as a grid'],['work','Work — formulas and inputs'],['share','Share — save, share or write back']];
+var V={"open": ["v8.png", "v4.png", "v3.png", "v2.png", "basic-v1.png"], "work": ["v10.png", "v9.png", "v8.png", "v4.png", "v3.png", "v2.png", "basic-v1.png"], "share": ["v8.png", "v4.png", "v3.png", "v2.png", "basic-v1.png"], "why": ["drawn-v4", "drawn-v3", "drawn-v2", "drawn-v1"]},STEPS=[['open','Open — any model as a grid'],['work','Work — formulas and inputs'],['share','Share — save, share or write back']];
 // Common style controls — add a group here to get a new control in the gear.
 var STYLE=[
  {key:'bg',label:'Image background',opts:[
@@ -711,7 +711,7 @@ var STYLE=[
   ['navy','Navy',{'--pbg':'radial-gradient(90% 80% at 80% 10%,#163a78 0%,#0a082d 60%)','--pbd':'transparent'}]
  ]}
 ];
-var KEY='ss-page-share-v2',st={};try{st=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
+var KEY='ss-page-share-v3',st={};try{st=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
 function label(f){return f.replace(/[.]png$/,'').replace(/-/g,' ').replace(/^./,function(c){return c.toUpperCase()})}
 function apply(){var w=st.why||V.why[0]||'none';document.body.classList.toggle('ill',w!=='none');if(w!=='none')document.querySelectorAll('img[data-why]').forEach(function(i){i.src='images/why/'+w+'/'+i.dataset.why+'.png'});STEPS.forEach(function(s){var k=s[0],f=st[k]&&V[k].indexOf(st[k])>-1?st[k]:V[k][0],img=document.querySelector('img[data-step="'+k+'"]');if(img)img.src='images/'+k+'/'+f});
