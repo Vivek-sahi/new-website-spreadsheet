@@ -587,15 +587,15 @@ body:not(.ill) .wimg{display:none}
  <div class="cards">
   <article class="pc active" id="c0" style="--i:0">
    <div class="tx"><div><h3>Open any model as a grid</h3><p>Work on any semantic model in a spreadsheet interface, queried live from your warehouse. Sort, filter, and apply conditional formatting in the grid.</p></div><div></div></div>
-   <div class="plate pic"><img data-step="open" loading="eager" src="images/open/basic-v1.png" alt="A governed model open as a live grid with the conditional formatting dialog" loading="lazy"></div>
+   <div class="plate pic"><img data-step="open" loading="eager" alt="A governed model open as a live grid with the conditional formatting dialog" loading="lazy"></div>
   </article>
   <article class="pc rev" id="c1" style="--i:1">
    <div class="tx"><div><h3>Work with formulas and inputs</h3><p>Use 70+ native formulas, add input tables or new columns for forecasts and notes, and watch results update as you go.</p></div><div></div></div>
-   <div class="plate pic"><img data-step="work" src="images/work/basic-v1.png" alt="A formula and an input column in a live spreadsheet" loading="lazy"></div>
+   <div class="plate pic"><img data-step="work" alt="A formula and an input column in a live spreadsheet" loading="lazy"></div>
   </article>
   <article class="pc" id="c2" style="--i:2">
    <div class="tx"><div><h3>Save, share or write back</h3><p>Save the sheet as an Answer, a shared view your team can search, open, and edit. Publish inputs to the warehouse with Writeback, ready for Spotter and Liveboards.</p></div><div></div></div>
-   <div class="plate pic"><img data-step="share" src="images/share/basic-v1.png" alt="Saving a spreadsheet as an Answer and sharing it" loading="lazy"></div>
+   <div class="plate pic"><img data-step="share" alt="Saving a spreadsheet as an Answer and sharing it" loading="lazy"></div>
   </article>
  </div>
  <div class="cta-row rv"><a class="btn btn-cy" href="https://www.thoughtspot.com/demo" target="_blank" rel="noopener">Request a demo</a><a class="btn btn-ol" href="https://www.thoughtspot.com/webinar-live-weekly-demo-tse" target="_blank" rel="noopener" style="width:250px">Watch the live demo</a></div>
@@ -702,7 +702,7 @@ p.style.cursor='pointer';p.onclick=function(){p.style.display='none';v.controls=
 <button class="gear" id="gearBtn" aria-label="Prototype controls" title="Prototype controls"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
 <div class="gpanel" id="gpanel" hidden></div>
 <script>(function(){
-var V={"open": ["video", "mp4", "webm", "animated-v5.webp", "v8.png"], "work": ["video", "mp4", "webm", "animated-v5.webp", "v10.png"], "share": ["video", "mp4", "webm", "animated-v5.webp", "v8.png"], "why": ["drawn-v5"]},STEPS=[['open','Open — any model as a grid'],['work','Work — formulas and inputs'],['share','Share — save, share or write back']];
+var V={"open": ["video", "mp4", "webm", "animated-v5.webp", "v8.png"], "work": ["video", "mp4", "webm", "animated-v5.webp", "v10.png"], "share": ["video", "mp4", "webm", "animated-v5.webp", "v8.png"], "why": ["drawn-v5"], "whyWebp": ["b"]},STEPS=[['open','Open — any model as a grid'],['work','Work — formulas and inputs'],['share','Share — save, share or write back']];
 // Common style controls — add a group here to get a new control in the gear.
 var STYLE=[
  {key:'bg',label:'Image background',opts:[
@@ -724,12 +724,12 @@ var VIO=('IntersectionObserver' in window)?new IntersectionObserver(function(es)
 var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function useVideo(img,k,f){var plate=img.parentElement,v=plate.querySelector('video');
  if(f!=='video'&&f!=='mp4'&&f!=='webm'){if(v){v.pause();v.style.display='none'}img.style.display='';plate.classList.remove('mp4');return false}
- if(!v){v=document.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.preload='none';v.setAttribute('playsinline','');v.setAttribute('muted','');
+ if(!v){v=document.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.preload=document.readyState==='complete'?'auto':'none';v.setAttribute('playsinline','');v.setAttribute('muted','');
   v.poster='images/mp4/'+k+'-poster.jpg';v.setAttribute('aria-label',img.alt);plate.appendChild(v);if(VIO&&!RM)VIO.observe(v)}
  var B='images/mp4/'+k,SRC={video:[[B+'-av1.webm','video/webm; codecs="av01.0.08M.08"'],[B+'-vp9.webm','video/webm; codecs="vp9"'],[B+'.mp4','video/mp4']],mp4:[[B+'.mp4','video/mp4']],webm:[[B+'-vp9.webm','video/webm; codecs="vp9"']]}[f];
  if(v.dataset.set!==f){v.dataset.set=f;v.removeAttribute('src');while(v.firstChild)v.removeChild(v.firstChild);SRC.forEach(function(x){var e=document.createElement('source');e.src=x[0];e.type=x[1];v.appendChild(e)});v.load()}
  v.style.display='block';img.style.display='none';img.dataset.file='';plate.classList.add('mp4');return true}
-function apply(){var w=V.why[0]||'none';document.body.classList.toggle('ill',w!=='none');if(w!=='none')document.querySelectorAll('img[data-why]').forEach(function(i){var b='images/why/'+w+'/'+i.dataset.why;i.onerror=function(){i.onerror=null;i.src=b+'.png'};i.src=b+'.webp'});STEPS.forEach(function(s){var k=s[0],f=st[k]&&V[k].indexOf(st[k])>-1?st[k]:V[k][0],img=document.querySelector('img[data-step="'+k+'"]');if(img&&useVideo(img,k,f))return;if(img){var nf='images/'+k+'/'+f;if(img.dataset.file===nf)return;img.dataset.file=nf;if(/\.webp$/.test(f)){delete SEEN[nf+'|'+k];startOnView(img)}else img.src=nf}});
+function apply(){var w=V.why[0]||'none';document.body.classList.toggle('ill',w!=='none');if(w!=='none')document.querySelectorAll('img[data-why]').forEach(function(i){var b='images/why/'+w+'/'+i.dataset.why;var wp=(V.whyWebp||[]).indexOf(i.dataset.why)>-1;i.onerror=wp?function(){i.onerror=null;i.src=b+'.png'}:null;var ns=b+(wp?'.webp':'.png');if(i.getAttribute('src')!==ns)i.src=ns});STEPS.forEach(function(s){var k=s[0],f=st[k]&&V[k].indexOf(st[k])>-1?st[k]:V[k][0],img=document.querySelector('img[data-step="'+k+'"]');if(img&&useVideo(img,k,f))return;if(img){var nf='images/'+k+'/'+f;if(img.dataset.file===nf)return;img.dataset.file=nf;if(/\.webp$/.test(f)){delete SEEN[nf+'|'+k];startOnView(img)}else img.src=nf}});
  document.body.classList.toggle('clean',!st.notes);
  var R=document.documentElement.style;STYLE.forEach(function(g){var o=g.opts.filter(function(x){return x[0]===st['s-'+g.key]})[0]||g.opts[0];Object.keys(o[2]).forEach(function(v){R.setProperty(v,o[2][v])})})}
 var P=document.getElementById('gpanel'),html='<div class="gh">Prototype controls</div>';
@@ -747,7 +747,10 @@ P.addEventListener('change',function(e){var t=e.target;if(t.id==='gnotes')st.not
 var B=document.getElementById('gearBtn');B.onclick=function(e){e.stopPropagation();P.hidden=!P.hidden};
 document.addEventListener('click',function(e){if(!P.contains(e.target)&&e.target!==B)P.hidden=true});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')P.hidden=true});
-apply();})();</script>
+apply();
+function warm(){document.querySelectorAll('img[data-why]').forEach(function(i){i.loading='eager'});document.querySelectorAll('.plate video').forEach(function(v){if(v.preload!=='auto'&&v.readyState===0&&v.paused){v.preload='auto';v.load()}})}
+if(document.readyState==='complete')setTimeout(warm,300);else window.addEventListener('load',function(){setTimeout(warm,300)});
+})();</script>
 <script>
 (function(){
  function fit(){document.body.style.zoom=Math.min(1,innerWidth/1440)}fit();addEventListener('resize',fit);
