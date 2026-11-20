@@ -474,6 +474,7 @@ body:not(.ill) .wimg{display:none}
 .gpanel label{display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer}
 .mocktoggle{position:fixed;right:16px;bottom:16px;z-index:99;font:500 12px 'Geist Mono',monospace;background:#fff3c4;border:1px solid #e8c95a;color:#5a4500;border-radius:999px;padding:8px 14px;cursor:pointer}
 .noimg{margin-top:30px;height:120px;border:1.5px dashed #c9d5e8;border-radius:12px;display:grid;place-items:center;font:12px 'Geist Mono',monospace;color:#8a97a6;text-align:center;padding:0 20px}
+.plate.pic img{filter:none!important;border-radius:0!important}  /* the images carry their own soft shadow; a CSS drop-shadow doubled it and got clipped by the plate */
 .plate.pic{position:relative;background:var(--pbg,linear-gradient(160deg,#ebfbff,#d5f4fd));border-color:var(--pbd,#00d2ff);transition:background .3s}
 .gpanel label.sel{display:flex;justify-content:space-between;gap:10px}
 .gpanel select{font:inherit;font-size:13px;color:#1b1b61;border:1px solid #c9d5e8;border-radius:6px;padding:4px 6px;background:#fff;max-width:170px}
